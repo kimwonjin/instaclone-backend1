@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon --exec node server.js"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,20 @@
   },
   "homepage": "https://github.com/kimwonjin/instaclone-backend1#readme",
   "dependencies": {
+    "@graphql-tools/load-files": "^6.6.0",
+    "@graphql-tools/merge": "^8.3.1",
+    "@graphql-tools/schema": "^8.5.1",
+    "@prisma/client": "^4.1.1",
     "apollo-server": "^2.25.2",
-    "graphql": "^15.8.0"
+    "dotenv": "^16.0.1",
+    "graphql": "^15.8.0",
+    "graphql-tools": "^8.3.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@babel/core": "^7.18.10",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "nodemon": "^2.0.19",
+    "prisma": "^4.1.1"
   }
 }
